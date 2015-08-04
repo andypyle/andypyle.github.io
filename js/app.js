@@ -62,7 +62,7 @@ $(document).ready(function(){
 			});
 
 			setTimeout(function(){
-				go.velocity('scroll', {offset:-navPanel.parent().outerHeight()});
+				go.velocity('scroll', {offset:-navPanel.parent().outerHeight(), duration: 1250});
 			}, 25);
 		}
 	});
@@ -75,14 +75,16 @@ $(document).ready(function(){
 	}, {duration: 0});
 
 	$(window).scroll(function(){
-		if($(this).scrollTop() >= ($('#about').offset().top - navPanel.parent().outerHeight())){
-			header.velocity({
+		if($(this).scrollTop() > 20){
+			header.velocity('stop')
+				.velocity({
 				backgroundColorAlpha: .45
-			}, {duration: 225});
-		} else {
-			header.velocity({
+			}, {duration: 185});
+		} else if($(this).scrollTop() < 20) {
+			header.velocity('stop')
+				.velocity({
 				backgroundColorAlpha: 0
-			}, {duration: 225});
+			}, {duration: 185});
 		}
 			
 	});
