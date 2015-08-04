@@ -985,6 +985,8 @@ body {
   color: #FFFFFF;
   font-family: 'Muli', 'Helvetica Neue', 'Verdana', sans-serif;
   font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 
 p,
@@ -1021,6 +1023,8 @@ section {
   color: inherit;
   text-transform: uppercase;
   margin: 1rem 0;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .circle {
@@ -1067,7 +1071,7 @@ header {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -1110,7 +1114,7 @@ nav {
      -moz-transform: translatex(-100%);
       -ms-transform: translatex(-100%);
           transform: translatex(-100%);
-  background-color: #A7967D;
+  background-color: rgba(102, 86, 64, 0.92);
   height: 100vh;
 }
 
@@ -1178,9 +1182,6 @@ nav .navigation li a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0% 0%;
-  -webkit-animation: coverImg 100s linear infinite;
-     -moz-animation: coverImg 100s linear infinite;
-          animation: coverImg 100s linear infinite;
 }
 
 #cover .coverFade {
@@ -1188,9 +1189,11 @@ nav .navigation li a {
   top: 0;
   left: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
   z-index: 0;
-  background-color: rgba(26, 26, 26, 0.4);
+  margin: 0;
+  padding: 0;
+  background-color: rgba(26, 26, 26, 0.55);
 }
 
 #cover .coverContent {
@@ -1296,6 +1299,7 @@ nav .navigation li a {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 #about h2 {
@@ -1305,7 +1309,12 @@ nav .navigation li a {
 #about img {
   width: 75%;
   height: auto;
-  margin: 1rem 0;
+  margin: 1rem 0 1.5rem;
+}
+
+#about p {
+  font-size: 1.5rem;
+  line-height: 1.75;
 }
 
 #projects {
@@ -1373,11 +1382,11 @@ nav .navigation li a {
       -ms-flex-order: 2;
           order: 2;
   position: absolute;
-  height: 100%;
-  background-color: rgba(44, 55, 66, 0.75);
+  background-color: rgba(44, 55, 66, 0.8);
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
 }
 
 #projects .project .projectThumb a.projectFade span {
