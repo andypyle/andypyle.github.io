@@ -156,7 +156,7 @@ $(document).ready(function(){
 		    data: {
 		    	name: name.val(),
 		    	message: message.val(),
-		    	_replyto: email.val()
+		    	_replyto: email.val(),
 		    	_subject: 'New message: ' + name.val()
 		    },
 		    dataType: "json",
