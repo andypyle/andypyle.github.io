@@ -160,11 +160,15 @@ $(document).ready(function(){
 		    	_subject: 'New message: ' + name.val()
 		    },
 		    dataType: "json",
+		    beforeSend: function(){
+		    	$('button.send').prop('disabled', true).html("<span class='collecticon collecticon-loop rotate></span>")
+		    },
 		    success: function(data, status){
 		    	form.velocity("fadeOut", {
 		    		duration: 250,
 		    		complete: function(){
-		    			form.html('<p>Thank you! I\'ll get back to you soon!</p>');
+		    			form.remove();
+		    			$('#contact').append('<p>Thank you! I\'ll get back to you soon!');
 		    		}
 		    	});
 		    },
