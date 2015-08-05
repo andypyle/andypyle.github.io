@@ -135,11 +135,38 @@ $(document).ready(function(){
 	var labels = $('form#contactForm label');
 	labels.hide();
 
+	var inputs = $("input[type='text'], input[type='email'], textarea");
+	var button = $('button.send');
+	var name = $("[name='name']");
+	var email = $("[name='email']");
+	var message = $("[name='message']");
+
+	inputs.on('input', function(e){
+		if(name.val().length > 0 &&
+			email.val().length > 0 &&
+			message.val().length > 0)
+			button.prop('disabled', false);
+	});
+
+	button.live('disabled', function(){
+		
+	});
+
 	form.on('submit', function(e){
-		e.preventDefault();
-		var name = $(this).find("[name='name']");
-		var email = $(this).find("[name='email']");
-		var message = $(this).find("[name='message']");
+		$.ajax({
+		    url: "//formspree.io/andy.pyle@gmail.com", 
+		    method: "POST",
+		    data: {
+		    	name: name.val(),
+		    	message: message.val(),
+		    	_replyTo: email.val()
+		    },
+		    dataType: "json",
+		    success: function(data, status){
+		    	console.log(status);
+		    	console.log(data);
+		    }
+		});
 		if(name.val().length <= 0){
 			name.next('label')
 				.velocity("fadeIn", {duration: 30})
@@ -148,7 +175,6 @@ $(document).ready(function(){
 			name.next('label')
 				.velocity("fadeOut", {duration: 100});
 		}
-
 
 		if(email.val().length <= 0){
 			email.next('label')
@@ -167,5 +193,7 @@ $(document).ready(function(){
 			message.next('label')
 				.velocity("fadeOut", {duration: 100});
 		}
+
+
 	});
 });
