@@ -160,8 +160,12 @@ $(document).ready(function(){
 		    },
 		    dataType: "json",
 		    success: function(data, status){
-		    	console.log(status);
-		    	console.log(data);
+		    	form.velocity("fadeOut", {
+		    		duration: 250,
+		    		complete: function(){
+		    			form.empty().html('<p>Success!</p>');
+		    		}
+		    	});
 		    },
 		    error: function(error){
 		    	console.error(error);
