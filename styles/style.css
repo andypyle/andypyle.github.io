@@ -1619,9 +1619,6 @@ nav .navigation li a {
   -webkit-transition: all 180ms ease-in-out;
      -moz-transition: all 180ms ease-in-out;
           transition: all 180ms ease-in-out;
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1;
 }
 
 #projects .project .projectThumb a.projectFade span {
