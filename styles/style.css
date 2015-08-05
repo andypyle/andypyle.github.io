@@ -1319,6 +1319,12 @@ nav .navigation li a {
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  #cover .coverContent a {
+    top: 5rem;
+  }
+}
+
 #cover .coverContent a:hover {
   -webkit-transform: scale(1.05);
      -moz-transform: scale(1.05);
