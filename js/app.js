@@ -1,22 +1,20 @@
 $(document).ready(function(){
 	/// Animate cover image.
-	var cover = $('#cover');
 
-	
-	cover.velocity('stop');
+	var cover = $('#cover');	
 
 	cover.velocity({
 		backgroundPositionX: '100%'
 	},{loop: 1000, duration: 50000}, 'easeInOutQuad');
 
 
+
 	/// Mobile navigation
+
 	var navToggle = $('.toggleNav');
 	var navPanel = $('nav');
 	var navLinks = $('nav ul.navigation li a')
 	var toggled = false;
-
-	//navPanel.hide();
 
 	navPanel.velocity({
 		translateX: "-100%",
@@ -42,6 +40,8 @@ $(document).ready(function(){
 		}
 	});
 
+	/// Links in navigation also close navPanel, and then scroll
+	//  to designated section.
 	navLinks.on('click', function(e){
 		e.preventDefault();
 		var go = $('#'+$(this).data('goto'));
@@ -62,10 +62,14 @@ $(document).ready(function(){
 			});
 
 			setTimeout(function(){
-				go.velocity('scroll', {offset:-navPanel.parent().outerHeight(), duration: 1250});
+				go.velocity('scroll', {offset:-navPanel.parent().outerHeight(), duration: 1100});
 			}, 25);
 		}
 	});
+
+
+	/// Header background changes if below certain point
+	//  for readability.
 
 	var header = $('header');
 
@@ -90,8 +94,9 @@ $(document).ready(function(){
 	});
 
 
+	/// Tapping/clicking on project thumb expands 
+	//  more information (projectMeta)
 
-	/// Project buttons
 	var projectBtn = $('.projectFade');
 	$('.projectMeta').hide();
 
@@ -100,17 +105,67 @@ $(document).ready(function(){
 		var project = $(this).parent().parent();
 		var meta = $(this).parent().siblings();
 		var otherMeta = $(this).parent().parent().siblings().find('.projectMeta');
+		var otherMetaOverlays = $(this).parent().parent().siblings().find('.projectFade');
 
-		meta.velocity("slideDown", {duration: 400, display:'flex'});
-		//$(this).parent().velocity("scroll", {duration: 400});
-		
+		// Fade out overlay on current project.
+		$(this).velocity({
+			opacity: 0
+		});
+
+		// Slide meta info in to view.
+		meta.velocity("slideDown", {duration: 400, display:'flex'});		
 		
 		setTimeout(function() {
-			
+			// While new meta info slides in to view,
+			// slide all others out.		
 		    otherMeta.velocity("slideUp");
-		    
+		    otherMetaOverlays.velocity({
+		    	opacity: 1
+		    });
 		}, 0);
+		// Scroll to top of clicked project thumbnail.
 		project.velocity('scroll', {delay: 400});
 
+	});
+
+
+	/// Contact form validation.
+
+	var form = $('form#contactForm');
+	var labels = $('form#contactForm label');
+	labels.hide();
+
+	form.on('submit', function(e){
+		e.preventDefault();
+		var name = $(this).find("[name='name']");
+		var email = $(this).find("[name='email']");
+		var message = $(this).find("[name='message']");
+		if(name.val().length <= 0){
+			name.next('label')
+				.velocity("fadeIn", {duration: 30})
+				.velocity("callout.shake");
+		} else {
+			name.next('label')
+				.velocity("fadeOut", {duration: 100});
+		}
+
+
+		if(email.val().length <= 0){
+			email.next('label')
+				.velocity("fadeIn", {duration: 30})
+				.velocity("callout.shake");
+		} else {
+			email.next('label')
+				.velocity("fadeOut", {duration: 100});
+		}
+
+		if(message.val().length <= 0){
+			message.next('label')
+				.velocity("fadeIn", {duration: 30})
+				.velocity("callout.shake");
+		} else {
+			message.next('label')
+				.velocity("fadeOut", {duration: 100});
+		}
 	});
 });

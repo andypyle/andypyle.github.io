@@ -51,6 +51,7 @@
 					<div class="projectMeta">
 						<div class="projectLinks"><a href="#" class="collecticon collecticon-github"></a><a href="#" class="collecticon collecticon-link"></a></div>
 						<div class="projectDescription">
+							<h3>Cat</h3>
 							<p>Project description. Pretty cool.</p>
 						</div>
 						<div class="projectTags"><span>MeteorJS</span><span>JavaScript</span>
@@ -62,6 +63,7 @@
 					<div class="projectMeta">
 						<div class="projectLinks"><a href="#" class="collecticon collecticon-github"></a><a href="#" class="collecticon collecticon-link"></a></div>
 						<div class="projectDescription">
+							<h3>Doge</h3>
 							<p>Much description. Pretty wow.</p>
 						</div>
 						<div class="projectTags"><span>Amaze</span><span>Wow</span>
@@ -73,6 +75,7 @@
 					<div class="projectMeta">
 						<div class="projectLinks"><a href="#" class="collecticon collecticon-github"></a><a href="#" class="collecticon collecticon-link"></a></div>
 						<div class="projectDescription">
+							<h3>Monkey</h3>
 							<p>Project description. Pretty cool.</p>
 						</div>
 						<div class="projectTags"><span>Trees</span><span>Bananas</span>
@@ -81,8 +84,24 @@
 				</article>
 			</section>
 			<section id="contact">
-				<h2 class="heading">Contact me</h2>
-				<p>Contact form goes here.</p>
+				<h2 class="heading">Get in touch</h2>
+				<form novalidate id="contactForm">
+					<div class="contactName">
+						<input type="text" name="name" required placeholder="First &amp; last name">
+						<label for="name">Required!</label>
+					</div>
+					<div class="contactEmail">
+						<input type="email" name="email" required placeholder="your@email.com">
+						<label for="email" class="error">Required!</label>
+					</div>
+					<div class="contactMessage">
+						<textarea name="message" required placeholder="Drop me a line!"></textarea>
+						<label for="message">Required!</label>
+					</div>
+					<div class="contactBtn">
+						<button type="submit">Send<span class="collecticon collecticon-envelope"></span></button>
+					</div>
+				</form>
 			</section>
 			<footer><span>&copy;2015 Andy Pyle</span></footer>
 		</main>
