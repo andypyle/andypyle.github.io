@@ -149,6 +149,7 @@ $(document).ready(function(){
 	});
 
 	form.on('submit', function(e){
+		e.preventDefault();
 		$.ajax({
 		    url: "https://formspree.io/andy.pyle@gmail.com", 
 		    method: "POST",
