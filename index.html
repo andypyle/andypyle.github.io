@@ -38,50 +38,68 @@
 				</div>
 			</section>
 			<section id="about">
-				<h2 class="heading">Who am I?</h2><img src="https://placekitten.com/g/500/500" class="circle">
-				<p>
-					I'm Andy, and I'm a Web Developer from the Central Coast of California.
-					I'm passionate about the web and creating awesome stuff with it.
-				</p>
+				<div class="secHeading">
+					<h2 class="heading">Who am I?</h2>
+				</div>
+				<div class="secContent"><img src="img/me1.jpg" class="circle">
+					<p>
+						I'm Andy, and I'm a Web Developer from the Central Coast of California.
+						I'm passionate about the web and creating awesome stuff with it.
+					</p>
+				</div>
 			</section>
 			<section id="projects">
 				<h2 class="heading">My Work</h2>
-				<article class="project">
-					<div class="projectThumb"><a href="#" class="projectFade"><span>Cat</span></a><img src="https://placekitten.com/g/500/300" class="projectImg"></div>
-					<div class="projectMeta">
-						<div class="projectLinks"><a href="#" class="collecticon collecticon-github"></a><a href="#" class="collecticon collecticon-link"></a></div>
-						<div class="projectDescription">
-							<h3>Cat</h3>
-							<p>Project description. Pretty cool.</p>
+				<div class="projectList">
+					<article class="project">
+						<div class="projectThumb"><a href="#" class="projectFade"><span>Cat</span></a><img src="https://placekitten.com/g/500/300" class="projectImg"></div>
+						<div class="projectMeta">
+							<div class="projectLinks"><a href="#" class="collecticon collecticon-github"></a><a href="#" class="collecticon collecticon-link"></a><a href="#" class="collecticon collecticon-magnifier-left"></a></div>
+							<div class="projectDescription">
+								<h3>Cat</h3>
+								<p>Project description. Pretty cool.</p>
+							</div>
+							<div class="projectTags"><span>MeteorJS</span><span>JavaScript</span>
+							</div>
 						</div>
-						<div class="projectTags"><span>MeteorJS</span><span>JavaScript</span>
+					</article>
+					<article class="project">
+						<div class="projectThumb"><a href="#" class="projectFade"><span>Doge</span></a><img src="https://placekitten.com/g/500/300" class="projectImg"></div>
+						<div class="projectMeta">
+							<div class="projectLinks"><a href="#" class="collecticon collecticon-github"></a><a href="#" class="collecticon collecticon-link"></a><a href="#" class="collecticon collecticon-magnifier-left"></a></div>
+							<div class="projectDescription">
+								<h3>Doge</h3>
+								<p>Much description. Pretty wow.</p>
+							</div>
+							<div class="projectTags"><span>Amaze</span><span>Wow</span>
+							</div>
 						</div>
-					</div>
-				</article>
-				<article class="project">
-					<div class="projectThumb"><a href="#" class="projectFade"><span>Doge</span></a><img src="https://placekitten.com/g/520/320" class="projectImg"></div>
-					<div class="projectMeta">
-						<div class="projectLinks"><a href="#" class="collecticon collecticon-github"></a><a href="#" class="collecticon collecticon-link"></a></div>
-						<div class="projectDescription">
-							<h3>Doge</h3>
-							<p>Much description. Pretty wow.</p>
+					</article>
+					<article class="project">
+						<div class="projectThumb"><a href="#" class="projectFade"><span>Monkey</span></a><img src="https://placekitten.com/g/500/300" class="projectImg"></div>
+						<div class="projectMeta">
+							<div class="projectLinks"><a href="#" class="collecticon collecticon-github"></a><a href="#" class="collecticon collecticon-link"></a><a href="#" class="collecticon collecticon-magnifier-left"></a></div>
+							<div class="projectDescription">
+								<h3>Monkey</h3>
+								<p>Project description. Pretty cool.</p>
+							</div>
+							<div class="projectTags"><span>Trees</span><span>Bananas</span>
+							</div>
 						</div>
-						<div class="projectTags"><span>Amaze</span><span>Wow</span>
+					</article>
+					<article class="project">
+						<div class="projectThumb"><a href="#" class="projectFade"><span>Eddie Murphy</span></a><img src="https://placekitten.com/g/500/300" class="projectImg"></div>
+						<div class="projectMeta">
+							<div class="projectLinks"><a href="#" class="collecticon collecticon-github"></a><a href="#" class="collecticon collecticon-link"></a><a href="#" class="collecticon collecticon-magnifier-left"></a></div>
+							<div class="projectDescription">
+								<h3>Eddie Murphy</h3>
+								<p>Party all the time.</p>
+							</div>
+							<div class="projectTags"><span>Parties</span><span>All the time</span>
+							</div>
 						</div>
-					</div>
-				</article>
-				<article class="project">
-					<div class="projectThumb"><a href="#" class="projectFade"><span>Monkey</span></a><img src="https://placekitten.com/g/550/350" class="projectImg"></div>
-					<div class="projectMeta">
-						<div class="projectLinks"><a href="#" class="collecticon collecticon-github"></a><a href="#" class="collecticon collecticon-link"></a></div>
-						<div class="projectDescription">
-							<h3>Monkey</h3>
-							<p>Project description. Pretty cool.</p>
-						</div>
-						<div class="projectTags"><span>Trees</span><span>Bananas</span>
-						</div>
-					</div>
-				</article>
+					</article>
+				</div>
 			</section>
 			<section id="contact">
 				<h2 class="heading">Get in touch</h2>
@@ -103,7 +121,12 @@
 					</div>
 				</form>
 			</section>
-			<footer><span>&copy;2015 Andy Pyle</span></footer>
+			<footer>
+				<div class="footerLeft"><span>&copy;2015 Andy Pyle</span></div>
+				<div class="footerRight"><span class="fmo">Find me on:</span>
+					<div class="footerLinks"><a href="https://www.linkedin.com/pub/andrew-pyle/b3/711/b46" target="_BLANK" class="collecticon collecticon-linkedin"></a><a href="http://www.github.com/andypyle" target="_BLANK" class="collecticon collecticon-github"></a></div>
+				</div>
+			</footer>
 		</main>
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/velocity/velocity.min.js"></script>

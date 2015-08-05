@@ -16,29 +16,31 @@ $(document).ready(function(){
 	var navLinks = $('nav ul.navigation li a')
 	var toggled = false;
 
-	navPanel.velocity({
-		translateX: "-100%",
-		opacity: 0
-	}, {duration: 0});
+	if(navToggle.is(':visible')){
+		navPanel.velocity({
+			translateX: "-100%",
+			opacity: 0
+		}, {duration: 0});
 
-	navToggle.on('click', function(e){
-		e.preventDefault();
-		if(!toggled){
-			toggled = !toggled;
-			navPanel.velocity('stop')
-			.velocity({
-				opacity: 1,
-				translateX: "-25%"
-			});
-		} else {
-			toggled = !toggled;
-			navPanel.velocity('stop')
-			.velocity({
-				opacity: 0,
-				translateX: "-100%"
-			});
-		}
-	});
+		navToggle.on('click', function(e){
+			e.preventDefault();
+			if(!toggled){
+				toggled = !toggled;
+				navPanel.velocity('stop')
+				.velocity({
+					opacity: 1,
+					translateX: "-25%"
+				});
+			} else {
+				toggled = !toggled;
+				navPanel.velocity('stop')
+				.velocity({
+					opacity: 0,
+					translateX: "-100%"
+				});
+			}
+		});
+	}
 
 	/// Links in navigation also close navPanel, and then scroll
 	//  to designated section.
@@ -46,26 +48,34 @@ $(document).ready(function(){
 		e.preventDefault();
 		var go = $('#'+$(this).data('goto'));
 
-		if(!toggled){
-			toggled = !toggled;
-			navPanel.velocity('stop')
-			.velocity({
-				opacity: 1,
-				translateX: "-25%"
-			});
-		} else {
-			toggled = !toggled;
-			navPanel.velocity('stop')
-			.velocity({
-				opacity: 0,
-				translateX: "-100%"
-			});
+		if(navToggle.is(':visible')){
+			if(!toggled){
+				toggled = !toggled;
+				navPanel.velocity('stop')
+				.velocity({
+					opacity: 1,
+					translateX: "-25%"
+				});
+			} else {
+				toggled = !toggled;
+				navPanel.velocity('stop')
+				.velocity({
+					opacity: 0,
+					translateX: "-100%"
+				});
 
-			setTimeout(function(){
-				go.velocity('scroll', {offset:-navPanel.parent().outerHeight(), duration: 1100});
-			}, 25);
+				setTimeout(function(){
+					go.velocity('scroll', {offset:-navPanel.parent().outerHeight(), duration: 1100});
+				}, 25);
+			}
 		}
+
+		if(navToggle.is(':hidden'))
+			go.velocity('scroll', {offset:-navPanel.parent().outerHeight(), duration: 1100});
+
 	});
+
+
 
 
 	/// Header background changes if below certain point
