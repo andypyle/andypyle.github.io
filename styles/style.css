@@ -1640,3 +1640,15 @@ footer {
 footer span {
   padding: 1.5rem;
 }
+
+.sendSuccess {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.sendError {
+  color: tomato;
+  text-align: center;
+  font-size: 1rem;
+}
