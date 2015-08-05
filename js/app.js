@@ -161,19 +161,19 @@ $(document).ready(function(){
 		    },
 		    dataType: "json",
 		    beforeSend: function(){
-		    	$('button.send').prop('disabled', true).html("<span class='collecticon collecticon-loop rotate></span>")
+		    	$('button.send').prop('disabled', true).html("<span class='collecticon collecticon-arrow-loop rotate></span>")
 		    },
 		    success: function(data, status){
 		    	form.velocity("fadeOut", {
 		    		duration: 250,
 		    		complete: function(){
 		    			form.remove();
-		    			$('#contact').append('<p>Thank you! I\'ll get back to you soon!');
+		    			$('#contact').append('<p class=\'sendSuccess\'>Thank you! I\'ll get back to you soon!</p>');
 		    		}
 		    	});
 		    },
 		    error: function(error){
-		    	console.error(error);
+		    	$('#contact').append('<p class=\'sendError\'>Oops! Sorry, but there was an error while sending. Try again later!</p>');
 		    }
 		});
 
