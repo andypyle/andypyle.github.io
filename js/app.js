@@ -42,6 +42,17 @@ $(document).ready(function(){
 		});
 	}
 
+
+	// Cover scroll button. Scrolls to about section.
+	var introBtn = $('a.introBtn')
+
+	introBtn.on('click', function(e){
+		e.preventDefault();
+		var go = $('#'+$(this).data('goto'));
+		go.velocity('scroll', {offset:-navPanel.parent().outerHeight(), duration: 1100});
+
+	});
+
 	/// Links in navigation also close navPanel, and then scroll
 	//  to designated section.
 	navLinks.on('click', function(e){
@@ -134,7 +145,7 @@ $(document).ready(function(){
 		    });
 		}, 0);
 		// Scroll to top of clicked project thumbnail.
-		project.velocity('scroll', {delay: 400});
+		project.velocity('scroll', {delay: 400, offset:-navPanel.parent().outerHeight()});
 
 	});
 
