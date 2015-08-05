@@ -1597,13 +1597,6 @@ nav .navigation li a {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
      -moz-box-pack: center;
@@ -1629,6 +1622,11 @@ nav .navigation li a {
   -webkit-transition: all 180ms ease-in-out;
      -moz-transition: all 180ms ease-in-out;
           transition: all 180ms ease-in-out;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+     -moz-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 #projects .project .projectThumb a.projectFade span {
