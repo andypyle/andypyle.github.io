@@ -92,7 +92,7 @@ $(document).ready(function(){
 		if($(this).scrollTop() > 20){
 			header.velocity('stop')
 				.velocity({
-				backgroundColorAlpha: .45
+				backgroundColorAlpha: .65
 			}, {duration: 185});
 		} else if($(this).scrollTop() < 20) {
 			header.velocity('stop')
@@ -171,7 +171,7 @@ $(document).ready(function(){
 		    },
 		    dataType: "json",
 		    beforeSend: function(){
-		    	$('button.send').prop('disabled', true).html("<span class='collecticon collecticon-arrow-loop rotate></span>")
+		    	$('button.send').prop('disabled', true).html("<span class='collecticon collecticon-arrow-loop rotate'></span>");
 		    },
 		    success: function(data, status){
 		    	form.velocity("fadeOut", {
