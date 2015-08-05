@@ -1727,6 +1727,11 @@ nav .navigation li a {
 @media only screen and (min-width: 1024px) {
   #contact {
     width: 65%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
