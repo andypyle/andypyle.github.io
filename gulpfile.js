@@ -26,7 +26,7 @@ var process = {
         }
     },
     'img':{
-        'in':'./src/img/*',
+        'in':'./src/img/**/*',
         'out':'./img'
     }
 };
