@@ -1607,6 +1607,10 @@ nav .navigation li a {
   margin-left: .5rem;
 }
 
+#contact .contactBtn button:disabled {
+  opacity: .25;
+}
+
 footer {
   display: -webkit-box;
   display: -webkit-flex;
