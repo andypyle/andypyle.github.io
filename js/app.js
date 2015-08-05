@@ -156,14 +156,15 @@ $(document).ready(function(){
 		    data: {
 		    	name: name.val(),
 		    	message: message.val(),
-		    	_replyTo: email.val()
+		    	_replyto: email.val()
+		    	_subject: 'New message: ' + name.val()
 		    },
 		    dataType: "json",
 		    success: function(data, status){
 		    	form.velocity("fadeOut", {
 		    		duration: 250,
 		    		complete: function(){
-		    			form.parent().html('<p>asdfasdf</p>');
+		    			form.html('<p>Thank you! I\'ll get back to you soon!</p>');
 		    		}
 		    	});
 		    },
