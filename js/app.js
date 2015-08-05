@@ -148,13 +148,9 @@ $(document).ready(function(){
 			button.prop('disabled', false);
 	});
 
-	button.live('disabled', function(){
-		
-	});
-
 	form.on('submit', function(e){
-		$.ajax({
-		    url: "//formspree.io/andy.pyle@gmail.com", 
+		return $.ajax({
+		    url: "https://formspree.io/andy.pyle@gmail.com", 
 		    method: "POST",
 		    data: {
 		    	name: name.val(),
@@ -167,6 +163,8 @@ $(document).ready(function(){
 		    	console.log(data);
 		    }
 		});
+
+		/*
 		if(name.val().length <= 0){
 			name.next('label')
 				.velocity("fadeIn", {duration: 30})
@@ -193,7 +191,7 @@ $(document).ready(function(){
 			message.next('label')
 				.velocity("fadeOut", {duration: 100});
 		}
-
+		*/
 
 	});
 });
