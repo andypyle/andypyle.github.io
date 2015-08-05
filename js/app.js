@@ -163,7 +163,7 @@ $(document).ready(function(){
 		    	form.velocity("fadeOut", {
 		    		duration: 250,
 		    		complete: function(){
-		    			form.empty().html('<p>Success!</p>');
+		    			form.parent().html('<p>asdfasdf</p>');
 		    		}
 		    	});
 		    },
