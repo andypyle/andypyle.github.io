@@ -1233,7 +1233,7 @@ nav .navigation li a {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("../img/cover2.jpg");
+  background-image: url("../img/cover3.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0% 0%;
@@ -1296,19 +1296,130 @@ nav .navigation li a {
   font-weight: 400;
 }
 
-@media only screen and (min-width: 1024px) {
-  #cover .coverContent h1 {
-    font-size: 6rem;
-    line-height: 1.25;
+#cover .coverContent a {
+  padding: 1rem;
+  line-height: 1;
+  position: relative;
+  top: 6rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: rgba(20, 39, 57, 0);
+  border-radius: 50%;
+  -webkit-animation: introBtnHov 2500ms infinite;
+     -moz-animation: introBtnHov 2500ms infinite;
+          animation: introBtnHov 2500ms infinite;
+}
+
+#cover .coverContent a:hover {
+  -webkit-transform: scale(1.05);
+     -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-animation-play-state: paused;
+     -moz-animation-play-state: paused;
+          animation-play-state: paused;
+  color: #FFFFFF;
+  opacity: 1 !important;
+}
+
+#cover .coverContent a span {
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(230, 230, 230, 0.8);
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: -50%;
+  right: 0;
+}
+
+@-webkit-keyframes introBtnHov {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
   }
-  #cover .coverContent h2 {
-    font-size: 4.5rem;
-    font-weight: 400;
-    line-height: 1.25;
+  100% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+    opacity: .25;
+    @media only screen and (min-width: 1024px) {
+      h1 {
+        font-size: 6rem;
+        line-height: 1.25;
+      }
+      h2 {
+        font-size: 4.5rem;
+        font-weight: 400;
+        line-height: 1.25;
+      }
+      span {
+        font-size: 3.5rem;
+        font-weight: 400;
+      }
+    }
   }
-  #cover .coverContent span {
-    font-size: 3.5rem;
-    font-weight: 400;
+}
+
+@-moz-keyframes introBtnHov {
+  0% {
+    -moz-transform: translateY(0px);
+         transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translateY(25px);
+         transform: translateY(25px);
+    opacity: .25;
+    @media only screen and (min-width: 1024px) {
+      h1 {
+        font-size: 6rem;
+        line-height: 1.25;
+      }
+      h2 {
+        font-size: 4.5rem;
+        font-weight: 400;
+        line-height: 1.25;
+      }
+      span {
+        font-size: 3.5rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@keyframes introBtnHov {
+  0% {
+    -webkit-transform: translateY(0px);
+       -moz-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(25px);
+       -moz-transform: translateY(25px);
+            transform: translateY(25px);
+    opacity: .25;
+    @media only screen and (min-width: 1024px) {
+      h1 {
+        font-size: 6rem;
+        line-height: 1.25;
+      }
+      h2 {
+        font-size: 4.5rem;
+        font-weight: 400;
+        line-height: 1.25;
+      }
+      span {
+        font-size: 3.5rem;
+        font-weight: 400;
+      }
+    }
   }
 }
 
