@@ -1302,6 +1302,13 @@ nav .navigation li a {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
      -moz-box-pack: center;
@@ -1317,6 +1324,8 @@ nav .navigation li a {
      -moz-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  height: 50%;
+  background: red;
 }
 
 #cover .coverContent .centeredButton a.introBtn {
