@@ -1301,16 +1301,6 @@ nav .navigation li a {
   line-height: 1;
   position: relative;
   top: 6rem;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-     -moz-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background-color: rgba(20, 39, 57, 0);
-  border-radius: 50%;
-  -webkit-animation: introBtnHov 2500ms infinite;
-     -moz-animation: introBtnHov 2500ms infinite;
-          animation: introBtnHov 2500ms infinite;
 }
 
 @media only screen and (min-width: 650px) {
@@ -1323,29 +1313,6 @@ nav .navigation li a {
   #cover .coverContent a {
     top: 5rem;
   }
-}
-
-#cover .coverContent a:hover {
-  -webkit-transform: scale(1.05);
-     -moz-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-animation-play-state: paused;
-     -moz-animation-play-state: paused;
-          animation-play-state: paused;
-  color: #FFFFFF;
-  opacity: 1 !important;
-}
-
-#cover .coverContent a i {
-  font-size: 4rem;
-  line-height: 1;
-  color: rgba(230, 230, 230, 0.8);
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 @-webkit-keyframes introBtnHov {
