@@ -1300,12 +1300,12 @@ nav .navigation li a {
   padding: 1rem;
   line-height: 1;
   position: absolute;
-  bottom: 2rem;
+  bottom: -20%;
   left: 50%;
-  -webkit-transform: translateX(50%);
-     -moz-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-          transform: translateX(50%);
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-animation: introBtnHov 2500ms infinite;
      -moz-animation: introBtnHov 2500ms infinite;
           animation: introBtnHov 2500ms infinite;
