@@ -1324,7 +1324,9 @@ nav .navigation li a {
      -moz-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 50%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
   background: red;
 }
 
