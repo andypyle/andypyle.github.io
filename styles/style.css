@@ -1335,8 +1335,10 @@ nav .navigation li a {
 
 #cover .coverContent .centeredButton a.introBtn {
   position: absolute;
-  left: 0;
-  right: 0;
+  -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
   padding: 1rem;
   line-height: 1;
   font-size: 4rem;
