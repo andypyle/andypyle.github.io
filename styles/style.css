@@ -1297,6 +1297,7 @@ nav .navigation li a {
 }
 
 #cover .coverContent a {
+  display: inline-block;
   padding: 1rem;
   line-height: 1;
   position: absolute;
