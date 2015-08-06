@@ -1337,7 +1337,7 @@ nav .navigation li a {
   opacity: 1 !important;
 }
 
-#cover .coverContent a span {
+#cover .coverContent a i {
   font-size: 4rem;
   line-height: 1;
   color: rgba(230, 230, 230, 0.8);
