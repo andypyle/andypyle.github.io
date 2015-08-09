@@ -133,8 +133,9 @@ $(document).ready(function(){
 			opacity: 0
 		});
 
+		if(meta.is(':hidden'))
 		// Slide meta info in to view.
-		meta.velocity("slideDown", {duration: 400, display:'flex'});		
+			meta.velocity("slideDown", {duration: 400, display:'flex'});		
 		
 		setTimeout(function() {
 			// While new meta info slides in to view,
@@ -147,6 +148,12 @@ $(document).ready(function(){
 		// Scroll to top of clicked project thumbnail.
 		project.velocity('scroll', {delay: 400, offset:-navPanel.parent().outerHeight()});
 
+		if(meta.is(':visible')){
+			meta.velocity("slideUp", {duration: 400});
+			$(this).velocity({
+				opacity: 1
+			});
+		}
 	});
 
 
