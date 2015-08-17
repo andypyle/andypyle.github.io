@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     jade = require('gulp-jade'),
     prefix = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
-    connect = require('gulp-connect');
+    browserSync = require('browser-sync').create();
 
 var process = {
     'sass':{
@@ -55,7 +55,7 @@ gulp.task('sass', function(){
     .pipe(minifyCSS())
     .pipe(concat('style.min.css'))
     .pipe(gulp.dest(process.sass.out))
-    .pipe(connect.reload());
+    .pipe(browserSync.stream());
 });
 /// --
 
@@ -65,7 +65,7 @@ gulp.task('jade', function(){
     gulp.src(process.jade.in)
         .pipe(jade(process.jade.opts))
         .pipe(gulp.dest(process.jade.out))
-    .pipe(connect.reload());
+
 });
 /// --
 
@@ -80,11 +80,14 @@ gulp.task('images', function(){
 
 
 // --- START SERVER
-gulp.task('connect', function(){
-    connect.server({
-        port: 3000,
-        livereload: true
+gulp.task('sync', function(){
+    browserSync.init({
+      server: './'
     });
+
+    gulp.watch('./src/sass/**/*.sass', ['sass']);
+    gulp.watch('./src/jade/**/*.jade', ['jade']);
+    gulp.watch('./*.html').on('change', browserSync.reload);
 });
 /// --
 
@@ -97,7 +100,7 @@ gulp.task('watch', function(){
 
 
 // --- DEFAULT
-gulp.task('default', ['connect','sass','jade','images','watch']);
+gulp.task('default', ['sync','sass','jade','images','watch']);
 /// --
 
 
