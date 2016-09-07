@@ -7,7 +7,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="og:title" content="Andy Pyle | Web Developer">
-		<!--meta(name='og:image', content='')-->
+		<meta name="og:image" content="og.jpg">
 		<meta name="og:description" content="Web Developer based on the Central Coast of California.">
 		<title>Andy Pyle | Web Developer</title>
 		<!--STYLESHEETS-->
@@ -34,27 +34,50 @@
 				<div class="coverFade"></div>
 				<div class="coverContent">
 					<h1>Hey!</h1>
+<<<<<<< HEAD
 					<h2>I'm Andy.</h2><span>I create web stuff.</span><a href="#" data-goto="about" class="introBtn"><span class="collecticon collecticon-chevron-down"></span></a>
+=======
+					<h2>I'm Andy.</h2><span>I create web stuff.</span>
+					<div class="centeredButton"><a href="#" data-goto="about" class="introBtn collecticon collecticon-chevron-down"></a></div>
+>>>>>>> master
 				</div>
 			</section>
 			<section id="about">
 				<div class="secHeading">
 					<h2 class="heading">Who am I?</h2>
 				</div>
-				<div class="secContent"><img src="img/me1.jpg" class="circle">
-					<p>
-						I'm Andy, and I'm a Web Developer from the Central Coast of California.
-						I'm passionate about the web and creating awesome stuff with it.
-					</p>
+				<div class="secContent">
+					<div class="aboutImg"><img src="img/me1.jpg" class="circle"></div>
+					<div class="aboutInfo">
+						<p>
+							I'm Andy, and I'm a Web Developer from the Central Coast of California.
+							I'm passionate about the web and creating awesome stuff with it.
+						</p>
+						<div class="aboutBtns"><a href="https://www.linkedin.com/pub/andrew-pyle/b3/711/b46" target="_BLANK" class="collecticon collecticon-linkedin"></a><a href="http://www.github.com/andypyle" target="_BLANK" class="collecticon collecticon-github"></a><a href="http://codepen.io/andypyle/" target="_BLANK" class="icon-codeopen"></a></div>
+					</div>
 				</div>
 			</section>
 			<section id="projects">
 				<h2 class="heading">My Work</h2>
 				<div class="projectList">
 					<article class="project">
+						<div class="projectThumb"><a href="#" class="projectFade"><span>SMM Water Company</span></a><img src="./img/pf/smmwc.jpg" class="projectImg"></div>
+						<div class="projectMeta">
+							<div class="projectLinks"><a href="http://www.smmwc.com" target="_BLANK" class="url collecticon collecticon-link"></a>
+							</div>
+							<div class="projectDescription">
+								<h3>SMM Water Company</h3>
+								<p>This is the website for San Miguelito Mutal Water Company. I did the design &amp; development for the front-end, and connected it to a CMS which was built by another developer on the team.</p>
+							</div>
+							<div class="projectTags"><span>HTML (Jade)</span><span>CSS (SASS)</span><span>JavaScript</span>
+							</div>
+						</div>
+					</article>
+					<article class="project">
 						<div class="projectThumb"><a href="#" class="projectFade"><span>Goldboot</span></a><img src="./img/pf/goldboot.jpg" class="projectImg"></div>
 						<div class="projectMeta">
-							<div class="projectLinks"><a href="https://github.com/andypyle/gb-prototype-2/" target="_BLANK" class="collecticon collecticon-github"></a><a href="http://www.goldbootmusic.com" target="_BLANK" class="collecticon collecticon-link"></a></div>
+							<div class="projectLinks"><a href="https://github.com/andypyle/gb-prototype-2/" target="_BLANK" class="git collecticon collecticon-github"></a><a href="http://www.goldbootmusic.com" target="_BLANK" class="url collecticon collecticon-link"></a>
+							</div>
 							<div class="projectDescription">
 								<h3>Goldboot</h3>
 								<p>This is the website for the band Goldboot. I implemented the design as a theme for OctoberCMS, and used Angular for the music &amp; tour sections to consume both the Bandsintown and Soundcloud APIs.</p>
@@ -64,21 +87,10 @@
 						</div>
 					</article>
 					<article class="project">
-						<div class="projectThumb"><a href="#" class="projectFade"><span>devLinks</span></a><img src="./img/pf/devlinks.jpg" class="projectImg"></div>
-						<div class="projectMeta">
-							<div class="projectLinks"><a href="https://github.com/andypyle/devlinks-meteor" target="_BLANK" class="collecticon collecticon-github"></a><a href="http://devlinks.meteor.com" target="_BLANK" class="collecticon collecticon-link"></a></div>
-							<div class="projectDescription">
-								<h3>devLinks</h3>
-								<p>devLinks is a very, very stripped down Reddit clone built in MeteorJS. I made it as easy as possible to simply login and share a link.</p>
-							</div>
-							<div class="projectTags"><span>MeteorJS</span><span>JavaScript</span><span>Full-Stack</span><span>Web App</span>
-							</div>
-						</div>
-					</article>
-					<article class="project">
 						<div class="projectThumb"><a href="#" class="projectFade"><span>easyForecast</span></a><img src="./img/pf/easyforecast.jpg" class="projectImg"></div>
 						<div class="projectMeta">
-							<div class="projectLinks"><a href="https://github.com/andypyle/easyforecast" target="_BLANK" class="collecticon collecticon-github"></a><a href="http://andypyle.github.io/easyforecast" target="_BLANK" class="collecticon collecticon-link"></a></div>
+							<div class="projectLinks"><a href="https://github.com/andypyle/easyforecast" target="_BLANK" class="git collecticon collecticon-github"></a><a href="https://andypyle.github.io/easyforecast" target="_BLANK" class="url collecticon collecticon-link"></a>
+							</div>
 							<div class="projectDescription">
 								<h3>easyForecast</h3>
 								<p>I built easyForecast as a way to learn how to consume APIs in Angular.</p>
