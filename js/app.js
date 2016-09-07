@@ -3,9 +3,11 @@ $(document).ready(function(){
 
 	var cover = $('#cover');	
 
+	
 	cover.velocity({
 		backgroundPositionX: '100%'
 	},{loop: 1000, duration: 50000}, 'easeInOutQuad');
+	
 
 
 

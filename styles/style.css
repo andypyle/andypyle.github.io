@@ -264,7 +264,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -1131,7 +1132,7 @@ header {
   left: 0;
   right: 0;
   z-index: 25;
-  padding: 0.5rem 0.75rem;
+  padding: .5rem .75rem;
 }
 
 header .siteHeader {
@@ -1220,7 +1221,7 @@ nav .navigation li {
 nav .navigation li a {
   font-size: 2rem;
   font-weight: 300;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1335,8 +1336,8 @@ nav .navigation li a {
 }
 
 #cover .coverContent h1 {
-  font-size: 4rem;
-  line-height: 1.25;
+  font-size: 5rem;
+  line-height: 1;
 }
 
 #cover .coverContent h2 {
@@ -1346,7 +1347,7 @@ nav .navigation li a {
 }
 
 #cover .coverContent span {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 400;
 }
 
@@ -1872,7 +1873,7 @@ nav .navigation li a {
 }
 
 #projects .project .projectMeta .projectLinks a {
-  padding: 0.5rem 1rem 1.5rem;
+  padding: .5rem 1rem 1.5rem;
   font-size: 2.5rem;
   opacity: 0.8;
   display: inline-block;
@@ -1907,7 +1908,7 @@ nav .navigation li a {
   position: absolute;
   opacity: 0;
   font-size: .7rem;
-  padding: 0.25rem 0.4rem;
+  padding: .25rem .4rem;
   background-color: #1a1a1a;
   font-family: 'Muli', 'Helvetica Neue', 'Verdana', sans-serif;
   font-weight: 300;
@@ -1959,7 +1960,7 @@ nav .navigation li a {
 #projects .project .projectMeta .projectTags span {
   font-size: 1rem;
   font-weight: 300;
-  padding: 0.35rem 0.5rem;
+  padding: .35rem .5rem;
   opacity: .8;
   margin: 1rem 0 0 1rem;
   background-color: #404D5A;
@@ -2117,7 +2118,7 @@ nav .navigation li a {
   box-shadow: none;
   border-radius: .15rem;
   font-size: 1.35rem;
-  padding: 0.25rem 1rem;
+  padding: .25rem 1rem;
   width: 50%;
   outline: none;
 }
@@ -2219,7 +2220,7 @@ footer .footerRight .footerLinks a {
   display: inline-block;
   color: #e6e6e6;
   font-size: 1.95rem;
-  padding: 0.4rem 0.5rem;
+  padding: .4rem .5rem;
   -webkit-transition: all 200ms ease-in-out;
      -moz-transition: all 200ms ease-in-out;
           transition: all 200ms ease-in-out;
